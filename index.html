@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Presentación</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="container">
+      <div class="card">
+        <div class="avatar" aria-hidden="true"></div>
+        <h1 class="name">Tu Nombre Aquí</h1>
+        <p class="tagline">Me encanta diseñar, crear y aprender cada día.</p>
+
+        <ul class="likes">
+          <li>Diseño UI/UX</li>
+          <li>Desarrollo web</li>
+          <li>Fotografía</li>
+          <li>Viajar y explorar</li>
+        </ul>
+
+        <div class="actions">
+          <a class="btn whatsapp" href="https://wa.me/8445375897" id="whatsappBtn">WhatsApp: 844 537 5897</a>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      // Reemplaza el texto con tu nombre real y tus gustos si quieres
+      document.querySelector('.name').textContent = 'Hola soy Jahir Moroles';
+      document.querySelector('.tagline').textContent = 'Me encanta crear y compartir cosas que emocionan.';
+      const likes = ['Videojuegos', 'Fútbol', 'Música', 'Cocina'];
+      const ul = document.querySelector('.likes');
+      ul.innerHTML = likes.map(l => `<li>${l}</li>`).join('');
+
+      // El botón de WhatsApp abre la conversación en móvil/WhatsApp Web
+      document.getElementById('whatsappBtn').addEventListener('click', e => {
+        // Dejar comportamiento por defecto para abrir wa.me
+      });
+    </script>
+  </body>
+</html>
