@@ -1,43 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Presentación</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <main class="container">
-      <div class="card">
-        <div class="avatar" aria-hidden="true"></div>
-        <h1 class="name">Tu Nombre Aquí</h1>
-        <p class="tagline">Me encanta diseñar, crear y aprender cada día.</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#3b1519">
+  <title>Jaime Escobedo | Presentación</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="profile-card">
+    <div class="avatar" aria-hidden="true">JE</div>
 
-        <ul class="likes">
-          <li>Diseño UI/UX</li>
-          <li>Desarrollo web</li>
-          <li>Fotografía</li>
-          <li>Viajar y explorar</li>
-        </ul>
+    <h1>Hola, soy Jaime Escobedo</h1>
+    <p class="introduction">Me encanta experimentar y descubrir cosas nuevas.</p>
 
-        <div class="actions">
-          <a class="btn whatsapp" href="https://wa.me/8445375897" id="whatsappBtn">WhatsApp: 844 537 5897</a>
-        </div>
-      </div>
-    </main>
+    <section class="interests" aria-labelledby="interests-heading">
+      <h2 id="interests-heading" class="visually-hidden">Mis intereses</h2>
+      <span class="interest">Baile</span>
+      <span class="interest">Música</span>
+      <span class="interest">Series</span>
+      <span class="interest">Skatear</span>
+    </section>
 
-    <script>
-      // Reemplaza el texto con tu nombre real y tus gustos si quieres
-      document.querySelector('.name').textContent = 'Hola soy Jahir Moroles';
-      document.querySelector('.tagline').textContent = 'Me encanta crear y compartir cosas que emocionan.';
-      const likes = ['Videojuegos', 'Fútbol', 'Música', 'Cocina'];
-      const ul = document.querySelector('.likes');
-      ul.innerHTML = likes.map(l => `<li>${l}</li>`).join('');
-
-      // El botón de WhatsApp abre la conversación en móvil/WhatsApp Web
-      document.getElementById('whatsappBtn').addEventListener('click', e => {
-        // Dejar comportamiento por defecto para abrir wa.me
-      });
-    </script>
-  </body>
+    <a class="contact-button" href="https://wa.me/528441309683" target="_blank" rel="noopener noreferrer">
+      <span aria-hidden="true">📱</span>
+      WhatsApp: 8441309683
+    </a>
+  </main>
+</body>
 </html>
