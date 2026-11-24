@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eduardo Adame Venancio · Tarjeta de presentación</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<main class="stage" id="stage">
+  <article class="card" id="card" aria-label="Tarjeta de presentación de Eduardo Adame Venancio">
+
+    <!-- Fondo -->
+    <span class="sun" aria-hidden="true"></span>
+    <span class="rays" aria-hidden="true"></span>
+    <span class="gloss" aria-hidden="true"></span>
+    <span class="swoosh swoosh-1" aria-hidden="true"></span>
+    <span class="swoosh swoosh-2" aria-hidden="true"></span>
+    <span class="swoosh swoosh-3" aria-hidden="true"></span>
+    <span class="hill hill-back" aria-hidden="true"></span>
+    <span class="hill hill-front" aria-hidden="true"></span>
+
+    <span class="bubble" style="--s:9cqw;  right:8cqw;  top:7cqw;  --d:0s"   aria-hidden="true"></span>
+    <span class="bubble" style="--s:4.5cqw; right:20cqw; top:4cqw;  --d:-2s"  aria-hidden="true"></span>
+    <span class="bubble" style="--s:5.5cqw; right:4cqw;  top:20cqw; --d:-4s"  aria-hidden="true"></span>
+    <span class="bubble" style="--s:3cqw;  right:16cqw; top:17cqw; --d:-1s"  aria-hidden="true"></span>
+    <span class="bubble" style="--s:2.4cqw; right:27cqw; top:13cqw; --d:-3s"  aria-hidden="true"></span>
+    <span class="bubble" style="--s:3.6cqw; right:10cqw; top:33cqw; --d:-5s"  aria-hidden="true"></span>
+
+    <!-- Contenido -->
+    <header class="identity">
+      <h1 class="name">Eduardo Adame Venancio</h1>
+      <p class="role">TSU en Desarrollo de Software Multiplataforma</p>
+      <p class="school">Universidad Tecnológica de Coahuila</p>
+    </header>
+
+    <ul class="contact">
+      <li>
+        <span class="orb" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
+        <a href="tel:+528445398076">8445398076</a>
+      </li>
+      <li>
+        <span class="orb" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+        <a href="mailto:24040001@alumno.utc.edu.mx">24040001@alumno.utc.edu.mx</a>
+      </li>
+      <li>
+        <span class="orb" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg></span>
+        <span>Desarrollo web full stack</span>
+      </li>
+    </ul>
+
+    <ul class="chips" aria-label="Tecnologías">
+      <li>PHP</li><li>MySQL</li><li>HTML</li><li>CSS</li><li>JavaScript</li>
+    </ul>
+
+    <span class="glare" aria-hidden="true"></span>
+  </article>
+</main>
+
+<script>
+(() => {
+  const stage = document.getElementById('stage');
+  const card  = document.getElementById('card');
+  const calm  = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  stage.addEventListener('pointermove', e => {
+    if (calm.matches || e.pointerType !== 'mouse') return;
+    const r = stage.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width  - .5;
+    const y = (e.clientY - r.top)  / r.height - .5;
+    card.style.setProperty('--ry', (x * 10).toFixed(2) + 'deg');
+    card.style.setProperty('--rx', (-y * 8).toFixed(2) + 'deg');
+    card.style.setProperty('--gx', ((x + .5) * 100).toFixed(1) + '%');
+    card.style.setProperty('--gy', ((y + .5) * 100).toFixed(1) + '%');
+  });
+
+  stage.addEventListener('pointerleave', () => {
+    card.style.setProperty('--rx', '0deg');
+    card.style.setProperty('--ry', '0deg');
+  });
+})();
+</script>
+</body>
+</html>
