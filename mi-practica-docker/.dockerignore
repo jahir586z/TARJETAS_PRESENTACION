@@ -1,0 +1,16 @@
+# El código de la app se clona DENTRO del contenedor (git clone),
+# así que al contexto de build no se envía nada local más que el Dockerfile.
+.git
+.gitignore
+README.md
+docker-compose.yml
+*.tar
+*.tar.gz
+node_modules
+dist
+.angular
+.vscode
+.idea
+*.log
+capturas
+reporte

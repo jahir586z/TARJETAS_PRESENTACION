@@ -1,0 +1,15 @@
+services:
+  tarjetas:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        # Repo público donde el equipo fusionó sus componentes de Angular
+        REPO_URL: ${REPO_URL:-https://github.com/jahir586z/TARJETAS_PRESENTACION.git}
+        BRANCH: ${BRANCH:-main}
+        APP_DIR: ${APP_DIR:-angular-app}
+    image: mi-practica-docker/tarjetas-angular:1.0
+    container_name: tarjetas-angular
+    ports:
+      - "8080:80"
+    restart: unless-stopped
