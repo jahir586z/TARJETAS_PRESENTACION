@@ -1,0 +1,27 @@
+/* Fuentes usadas por la tarjeta de Eduardo */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Botón para regresar a la página principal desde cada tarjeta */
+.volver {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 100;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: rgba(16, 24, 39, 0.85);
+  color: #ffffff;
+  font: bold 14px Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.volver:hover {
+  background: #2563eb;
+}

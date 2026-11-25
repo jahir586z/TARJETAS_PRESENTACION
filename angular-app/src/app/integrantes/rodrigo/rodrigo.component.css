@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* En el HTML original era "body" */
+:host {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    font-family: Arial, sans-serif;
+    background: var(--fondo);
+    color: white;
+}
+
+.tarjeta {
+    width: 100%;
+    max-width: 850px;
+    padding: 60px 30px;
+    text-align: center;
+    border-radius: 25px;
+    background: #190e12;
+    box-shadow: 0 15px 40px rgba(0,0,0,.4);
+}
+
+.avatar {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: bold;
+    background: var(--color);
+}
+
+h1 {
+    font-size: 38px;
+    margin-bottom: 25px;
+    color: var(--texto);
+}
+
+.descripcion {
+    color: #d5b9bd;
+    font-size: 19px;
+    margin-bottom: 32px;
+}
+
+.intereses {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.intereses span {
+    background: rgba(255,255,255,.06);
+    padding: 14px 18px;
+    border-radius: 30px;
+    color: #e6c5ca;
+    font-weight: bold;
+}
+
+.whatsapp {
+    display: inline-block;
+    padding: 17px 25px;
+    border-radius: 14px;
+    background: var(--color);
+    color: #180d10;
+    font-weight: bold;
+}
+
+/* En el original era ".rodrigo" sobre el body */
+:host(.rodrigo) {
+    --fondo: #102c43;
+    --color: #49a9ed;
+    --texto: #cceaff;
+}
+
+@media (max-width: 550px) {
+    h1 {
+        font-size: 27px;
+    }
+
+    .tarjeta {
+        padding: 40px 20px;
+    }
+}
