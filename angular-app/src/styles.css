@@ -8,8 +8,9 @@ body {
 }
 
 /* Botón para regresar a la página principal desde cada tarjeta */
-.volver {
+a.volver {
   position: fixed;
+  margin: 0;
   top: 16px;
   left: 16px;
   z-index: 100;
@@ -22,6 +23,6 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.volver:hover {
+a.volver:hover {
   background: #2563eb;
 }
